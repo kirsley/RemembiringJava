@@ -2,9 +2,9 @@
 public class Sesion {
 	private int segundos;
 	private int count;
-	private float calorias;
+	private double calorias;
 	
-	public Sesion(int min,int sec,int count,float calorias){
+	public Sesion(int min,int sec,int count,double calorias){
 		this.segundos = (min * 60) + sec;
 		this.count = count;
 		this.calorias = calorias;
@@ -44,11 +44,11 @@ public class Sesion {
 		this.count = count;
 	}
 
-	public float getCalorias() {
+	public double getCalorias() {
 		return calorias;
 	}
 
-	public void setCalorias(float calorias) {
+	public void setCalorias(double calorias) {
 		this.calorias = calorias;
 	}
 }
