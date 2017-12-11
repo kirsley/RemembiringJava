@@ -28,7 +28,7 @@ public class UsaGatRenat {
 		renat.seu();
 		System.out.println("El Gat Renat esta " + renat.getEstat());
 		renat.aixecat();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		System.out.println("El Gat Renat diu que esta " + renat.getEstat());
 		renat.aixecat();
 
 	}
