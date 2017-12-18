@@ -14,21 +14,23 @@ public class UsaGatRenat {
 	public static void main(String[] args) {
 
 		GatRenat renat = new GatRenat();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.estirat();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.seu();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.estirat();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		renat.calla();
+		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.estirat();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.seu();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.seu();
-		System.out.println("El Gat Renat esta " + renat.getEstat());
+		renat.parla();
+		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.aixecat();
-		System.out.println("El Gat Renat diu que esta " + renat.getEstat());
+		System.out.println("El Gat Renat diu que esta " + renat.getEstatString());
 		renat.aixecat();
 
 	}
