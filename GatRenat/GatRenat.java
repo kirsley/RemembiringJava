@@ -11,6 +11,12 @@ public class GatRenat {
 	private GatEstat estat = GatEstat.dret;
 	private boolean parla = true;
 	
+	public GatRenat(){
+		//Constructor per defecte
+	}
+	public GatRenat(boolean parla){
+		this.setParla(parla);
+	}
 	public int getVides(){
 		return this.vides;
 	}

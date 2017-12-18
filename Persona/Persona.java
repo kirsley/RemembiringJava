@@ -15,10 +15,16 @@ public class Persona {
     }
     
     public Persona(String nom,String cognom,int anyNaixement,int anyDefuncio){
-        this.setNom(nom);
-        this.setCognom(cognom);
-        this.setAnyNaixement(anyNaixement);
-        this.setAnyDefuncio(anyDefuncio);
+        setNom(nom);
+        setCognom(cognom);
+        setAnyNaixement(anyNaixement);
+        setAnyDefuncio(anyDefuncio);
+    }
+    public Persona(String nom,String cognom,int anyNaixement){
+        setNom(nom);
+        setCognom(cognom);
+        setAnyNaixement(anyNaixement);
+        setAnyDefuncio(-1);
     }
     
     public String getNom() {
