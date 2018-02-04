@@ -65,6 +65,46 @@ public class Hora {
 		int newTime=this.toSecs()+1;
 		this.setNewHora(newTime);
 	}
+	
+	public void sumasec(){
+		this.sec += 1;
+		if (sec == 60){
+			sec = 0;
+			min += 1;
+		}
+		if (min == 60){
+			min = 0;
+			hora += 1;
+		}
+		if (hora == 24){
+			hora = 0;
+		}
+	}
+	
+	public void restasec(){
+		sec -= 1;
+		if (sec < 0){
+			sec = 59;
+			min -= 1;
+		}
+		if (min < 0){
+			min = 59;
+			hora -= 1;
+		}
+		if (hora < 0 ){
+			hora = 23;
+		}
+	}
+	public void sumasec(int secs){
+		for (int i = 0; i < secs; i++){
+			sumasec();
+		}
+	}
+	public void restasec(int secs){
+		for (int i = 0; i < secs; i++){
+			restasec();
+		}
+	}
 	public void incrementa(int secs){
 		int newTime=this.toSecs() + secs;
 		this.setNewHora(newTime);
@@ -102,5 +142,14 @@ public class Hora {
 			diff = 0;
 		}
 		return diff;
+	}
+	public static int compareTo(Hora h1, Hora h2){
+	 return h1.toSecs() - h2.toSecs();
+	}
+	public static boolean valida(int hora, int min, int sec){
+		return (hora <= 23 && hora >= 0 && min <= 59 && min >= 0 && sec <= 59 && sec >= 0);
+	}
+	public static Hora duplica(Hora h){
+		return new Hora(h.getHora(),h.getMin(),h.getSec());
 	}
 }

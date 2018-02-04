@@ -9,11 +9,30 @@
 import java.io.*;
 public class UsaGatRenat {
 
+	public static void main(String[] args) throws IOException {
+		System.out.println("Inicialment el nombre d'instàncies és: " +
+		GatRenat.getNumGats());
+		// crea uns quants GatRenat per demostrar l'ús de membres estàtics
+		GatRenat[] gats = new GatRenat[10];
+		for (int i=0; i < gats.length; i++) {
+		gats[i] = new GatRenat();
+		gats[i].setVides(i);
+		// canviem les vides només per distingir-los
+		System.out.println("Tenim: " + gats[i] + " amb " +
+		GatRenat.getNumGats() + " germanets");
+		}
+		// tornem a demanar a cadascun quants germans té
+		System.out.println("I si tornem a demanar-los quants germans tenen, ens diuen:");
+		for (int i=0; i < gats.length; i++) {
+		System.out.println("Gat amb id " + gats[i].getIdGat() + " amb " +
+		GatRenat.getNumGats() + " germanets");
+		}
+		gats[5].posaPicarol(new Picarol());
+		
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) throws IOException {
-
+/*
 		GatRenat renat = new GatRenat();
 		System.out.println("Nou GatRenat Creat");
 		System.out.println("[Renat:] ");
@@ -28,7 +47,7 @@ public class UsaGatRenat {
 		 * parla
 		 * adeu
 		 */
-		
+	/*	
 		while(!comanda.equals("adeu")){
 			if (comanda.equals( "com estas?")){
 				if (renat.potParlar()){
@@ -54,7 +73,7 @@ public class UsaGatRenat {
 		    }
 			System.out.println("[Prompt:] ");
 			comanda = new BufferedReader(new InputStreamReader(System.in)).readLine();
-		}
+		}*/
 		/*
 		System.out.println("El Gat Renat esta " + renat.getEstatString());
 		renat.estirat();

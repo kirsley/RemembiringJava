@@ -7,15 +7,25 @@
  *
  */
 public class GatRenat {
+	private static int numGats;
+	private final int idGat;
 	private int vides = 1;
 	private GatEstat estat = GatEstat.dret;
 	private boolean parla = true;
+	private Picarol picarol = null;
 	
 	public GatRenat(){
+		numGats+=1;
+		idGat=numGats;
 		//Constructor per defecte
 	}
+	public int getIdGat(){
+		return idGat;
+	}
 	public GatRenat(boolean parla){
+		this();
 		this.setParla(parla);
+		
 	}
 	public int getVides(){
 		return this.vides;
@@ -35,13 +45,24 @@ public class GatRenat {
 	public GatEstat getEstat() {
 		return this.estat;
 	}
-	
+	public static int getNumGats() {
+		// retorna el nombre d'instàncies creades fins el moment
+		return numGats;
+	}
 	public void setEstat(String estat) {
 		if (GatEstat.conte(estat)){
 			this.estat = GatEstat.valueOf(estat);
 		}
 	}
-	
+	public boolean tePicarol(){
+		return picarol != null;
+	}
+	public void posaPicarol(Picarol p){
+		picarol = p;
+	}
+	public void treuPicarol(){
+		picarol = null;
+	}
 	public void setEstat(GatEstat estat){
 		this.estat = estat;
 	}
@@ -123,4 +144,5 @@ public class GatRenat {
 			System.out.println("...");
 		}
 	}
+	public String toString() { return "Gat Renat amb " + vides + " vides"; }
 }
